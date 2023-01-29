@@ -10,7 +10,13 @@ class Orang {
 
     // method
     ngopi() {
-        console.log('${this.nama} menyeruput kopi');
+        console.log(`${this.nama} menyeruput kopi`);
+    }
+    makan() {
+        console.log(`${this.nama} memakan gorengan`);
+    }
+    berenang() {
+        console.log(`${this.nama} ${this.alamat} berenang di pantai`);
     }
 
 
@@ -31,3 +37,5 @@ console.log(orang3);
 
 // memanggil method
 orang1.ngopi();
+orang2.makan();
+orang3.berenang();
