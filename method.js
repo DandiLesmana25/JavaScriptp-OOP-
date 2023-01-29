@@ -28,6 +28,18 @@ class Car {
     }
 }
 
+const car = new Car('BMW', 'red', 200);
+
+car.drive();
+car.turn('left');
+car.reverse();
+
+
+
+
+
+
+
 class Mail {
     constructor(sender, receiver, subject, body) {
         this.sender = sender;

@@ -1,4 +1,4 @@
-// standar
+// standar property
 // class Car {
 //     constructor(brand, color, maxSpeed) {
 //         this.brand = brand;
@@ -22,12 +22,12 @@ class User {
         this.lastName = lastName;
     }
 
-    //methos get
+    //methos get(accessor property)
     get fullName() {
         return `${this.firstName} ${this.lastName}`;
     }
 
-    //methos set
+    //method set(accessor property)
     set fullName(fullName) {
         const [firstName, lastName] = fullName.split(' ');
         this.firstName = firstName;
