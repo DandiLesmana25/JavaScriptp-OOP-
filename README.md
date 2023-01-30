@@ -31,10 +31,21 @@ pemberian tanda underscore pada properti atau method bisa dijadikan sebagai pena
 
 
 #Constuctor Overriding
- Constructor akan mengembalikan objek yang merupakan instance dari class tersebut. Perbedaan dengan method pada umumnya, pada constructor kita tidak perlu menulis return ketika hendak mengembalikan nilai karena sudah dilakukan secara implisit.
+Overriding constructor dilakukan sesimpel kita mendefinisikan kembali method constructor() pada sebuah subclass. 
+Selain itu, method constructor didefinisikan dengan perubahan sesuai kebutuhan kita, misalnya menambahkan menambahkan properti dan argumen isBusiness. Satu hal yang penting dalam penerapan constructor overriding adalah jangan sampai lupa untuk memanggil method super(). 
+Memanggil method super() artinya memanggil constructor superclass, yaitu MailService
 
+ Constructor akan mengembalikan objek yang merupakan instance dari class tersebut. Perbedaan dengan method pada umumnya, pada constructor kita tidak perlu menulis return ketika hendak mengembalikan nilai karena sudah dilakukan secara implisit.
  Di dalam constructor, biasanya kita mendefinisikan properti dan menetapkan nilainya
 
  //Method Overriding
  Konsep overriding juga bisa diterapkan pada method class.
  Method overriding biasanya dilakukan ketika kita ingin mengubah implementasi method warisan superclass.
+ Contohnya, pada class MailService terdapat method send() yang sudah didefinisikan implementasinya. Namun, jika pada subclass WhatsAppService kita membutuhkan implementasi yang berbeda, kita bisa override method send().
+
+ Cara override method pada subclass mirip seperti override constructor, tetapi kita tidak perlu memanggil method super di dalamnya.
+
+//object Composition
+ pewarisan mendorong kita untuk menstrukturkan kode dengan pendekatan peran atau identitas class.
+ Dengan memecah kode berdasarkan kemampuan, ke depannya kita akan lebih mudah dalam membuat objek dengan peran apa pun yang membutuhkan kombinasi dari kemampuan-kemampuan yang ada, tanpa ada kode yang repetitif.
+ Agar lebih mudah dalam membuat objek, kita bisa membuat sebuah fungsi sebagai object creator dengan mengomposisikan kemampuan-kemampuan yang dibutuhkan. Di JavaScript, kita bisa secara mudah mengomposisikan objek dengan menggunakan method Object.assign().
